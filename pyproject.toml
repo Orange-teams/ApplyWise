@@ -1,0 +1,12 @@
+[project]
+name = "applywise"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "bs4>=0.0.2",
+    "google>=3.0.0",
+    "protobuf>=7.34.1",
+    "requests>=2.34.2",
+]

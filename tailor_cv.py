@@ -101,7 +101,8 @@ def compile_pdf(tex_filepath: str, output_filename: str):
 def main():
     # Configuration
     job_url = input("Enter the Job Description URL: ").strip()
-    master_resume_path = "master_resume.tex"
+    #master_resume_path = "master_resume.tex"
+    master_resume_path = "main.tex"
     tailored_tex_path = "tailored_output.tex"
     output_pdf_name = "Tailored_CV"
     
