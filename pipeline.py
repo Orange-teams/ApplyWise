@@ -19,9 +19,10 @@ def sanitize_folder_name(name: str) -> str:
 
 def main():
     # 1. Configuration
-    master_resume_path = "master_resume.tex"
+    master_resume_path = "main.tex"
     output_base_dir = "applications"
-    my_keywords = ["Python Developer", "Data Analyst", "Software Engineer"]
+    #my_keywords = ["Python Developer", "Data Analyst", "Software Engineer"]
+    my_keywords = ["Applied scientist", "Data scientist", "AI Engineer"]
     
     if not os.path.exists(master_resume_path):
         print(f"Error: Could not find '{master_resume_path}' in the current directory.")
@@ -33,7 +34,7 @@ def main():
         keywords=my_keywords,
         location="Germany",
         job_format="full-time",
-        experience_level="entry",
+        experience_level="senior",
         max_jobs=10,
         filename="linkedin_germany_filtered.json",
     )
