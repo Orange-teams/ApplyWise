@@ -20,7 +20,7 @@ def sanitize_folder_name(name: str) -> str:
 def main():
     # 1. Configuration
     master_resume_path = "main.tex"
-    output_base_dir = "applications"
+    output_base_dir = "output/applications"
     #my_keywords = ["Python Developer", "Data Analyst", "Software Engineer"]
     my_keywords = ["Applied scientist", "Data scientist", "AI Engineer"]
     
