@@ -13,3 +13,8 @@ dependencies = [
     "requests>=2.34.2",
     "sqlalchemy>=2.0.49",
 ]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.0",
+]

@@ -1,0 +1,12 @@
+repos:
+  - repo: local
+    hooks:
+      - id: update-readme
+        name: Update Directory READMEs
+        #entry: python ./scripts/update_readme/update_all_readmes.py
+        entry: bash -c "python ./scripts/update_readme/update_all_readmes.py && git add -A"
+        language: python
+        # This ensures it runs even if you didn't manually change the README
+        pass_filenames: false
+        always_run: true
+        additional_dependencies: [] # Add any pip packages your script needs
