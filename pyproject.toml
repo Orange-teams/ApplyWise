@@ -9,5 +9,7 @@ dependencies = [
     "dotenv>=0.9.9",
     "google-genai>=2.3.0",
     "pandas>=3.0.3",
+    "pydantic-settings>=2.14.1",
     "requests>=2.34.2",
+    "sqlalchemy>=2.0.49",
 ]
