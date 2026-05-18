@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, UniqueConstraint
+from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, UniqueConstraint, Text
 from datetime import datetime
 
 from src.db.base import Base
@@ -9,6 +9,7 @@ class User(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String, unique=True)
+    added_at = Column(DateTime, default=datetime.utcnow)
 
 
 class Keyword(Base):
@@ -30,6 +31,7 @@ class Job(Base):
     location = Column(String)
     url = Column(String, unique=True)
     source = Column(String)
+    job_description = Column(Text)
 
 
 class UserJob(Base):

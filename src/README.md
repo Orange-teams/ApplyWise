@@ -42,6 +42,8 @@ The `src/` directory contains the core implementation of ApplyWise — the main 
 ├── utils
 │   ├── http.py
 │   └── logger.py
+├── workers
+│   └── job_description_worker.py
 ├── workflows
 │   └── application_pipeline.py
 ├── main.py

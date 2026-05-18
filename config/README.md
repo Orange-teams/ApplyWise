@@ -13,6 +13,7 @@ The `config/` directory contains all configuration settings required to run Appl
 ### Directory Structure:
 <!-- BEGIN TREE -->
 ```text
+├── prompts.yaml
 ├── README.md
 └── settings.py
 ```

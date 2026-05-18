@@ -2,7 +2,9 @@ from src.services.user_service import UserService
 from src.services.job_service import JobService
 from src.crawlers.linkedin import LinkedInCrawler
 from src.core.exceptions import UserNotFoundException
-
+from src.workers.job_description_worker import (
+    JobDescriptionWorker,
+)
 class ApplicationPipeline:
 
     def run(self, user_id: int):
@@ -20,13 +22,19 @@ class ApplicationPipeline:
         crawler = LinkedInCrawler()
         job_service = JobService(crawler)
 
-        jobs = job_service.run(
-            user_id=user_id,
+        jobs = job_service.fetch_jobs(
             keywords=keywords,
             location="Germany",
             job_format="full-time",
             experience_level="entry",
             max_jobs=20,
         )
+        worker = JobDescriptionWorker()
+        enriched_jobs = worker.enrich(jobs)
 
-        return jobs
+        job_service.save_jobs(
+            user_id=user_id,
+            jobs=enriched_jobs,
+        )
+
+        return enriched_jobs

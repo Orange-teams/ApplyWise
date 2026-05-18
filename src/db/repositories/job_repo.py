@@ -23,6 +23,7 @@ class JobRepository:
                         location=job.location,
                         url=job.url,
                         source=job.source,
+                        job_description=job.job_description,
                     )
                     session.add(db_job)
                     session.flush()

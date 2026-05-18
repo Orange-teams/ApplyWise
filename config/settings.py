@@ -1,6 +1,6 @@
 from pathlib import Path
 from pydantic_settings import BaseSettings
-
+import yaml
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -16,6 +16,9 @@ class Settings(BaseSettings):
     OUTPUT_DIR: Path = DATA_DIR / "outputs"
     LOG_DIR: Path = BASE_DIR / "logs"
 
+    PROMPTS_PATH: Path = BASE_DIR / "config" / "prompts.yaml"
+
+    OUTPUT_DIR: Path = BASE_DIR / "data" / "outputs"
     # ===== Requests =====
     REQUEST_TIMEOUT: int = 20
     REQUEST_DELAY: int = 3

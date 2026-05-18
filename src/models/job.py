@@ -10,3 +10,4 @@ class Job(BaseModel):
     url: str
     matched_keyword: str
     source: str
+    job_description: str | None = None
