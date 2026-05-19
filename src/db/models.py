@@ -55,3 +55,15 @@ class UserJob(Base):
     __table_args__ = (
         UniqueConstraint("user_id", "job_id"),
     )
+
+class TailoredResume(Base):
+    __tablename__ = "tailored_resumes"
+
+    id = Column(Integer, primary_key=True)
+    job_id = Column(Integer, ForeignKey("jobs.id"))
+    model_name = Column(String)
+    template_name = Column(String)
+    tex_path = Column(String)
+    pdf_path = Column(String)
+    status = Column(String)
+    created_at = Column(DateTime)

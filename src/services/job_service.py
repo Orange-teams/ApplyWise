@@ -1,4 +1,5 @@
 from src.db.repositories.job_repo import JobRepository
+from src.core.exceptions import JobNotFoundException
 
 
 class JobService:
@@ -39,3 +40,15 @@ class JobService:
             user_id=user_id,
             jobs=jobs,
         )
+
+    # ---------------------------------
+    # GET JOB BY ID
+    # ---------------------------------
+    def get_job(
+        self,
+        job_id: int
+    ):
+        job = self.repo.get_job(job_id)
+        if not job:
+            raise JobNotFoundException(f"Job {job_id} not found")
+        return job

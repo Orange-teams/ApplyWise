@@ -2,7 +2,7 @@ from src.services.user_service import UserService
 from src.services.job_service import JobService
 from src.crawlers.linkedin import LinkedInCrawler
 from src.core.exceptions import UserNotFoundException
-from src.workers.job_description_worker import (
+from src.crawlers.parsers.linkedin_job_description_parser import (
     JobDescriptionWorker,
 )
 class ApplicationPipeline:
@@ -14,8 +14,8 @@ class ApplicationPipeline:
         try:
             keywords = user_service.get_keywords(user_id)
 
-        except UserNotFoundException:
-            print("User missing → stopping pipeline")
+        except UserNotFoundException as e:
+            print(e)
             return
 
         # 2. crawl jobs

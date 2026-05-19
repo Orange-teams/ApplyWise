@@ -1,0 +1,311 @@
+\documentclass[11pt,a4paper]{article}
+
+% ------------------------------------------------
+% Packages
+% ------------------------------------------------
+\usepackage[a4paper,margin=1.7cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{needspace}
+
+\raggedbottom
+
+\interlinepenalty=10000
+
+\titleformat{\section}
+{\normalfont}
+{}
+{0em}
+{
+    \needspace{8\baselineskip}
+    \color{primary}
+    \bfseries
+    \fontsize{13}{15}\selectfont
+}
+[\titlerule]
+% ------------------------------------------------
+% Colors
+% ------------------------------------------------
+\definecolor{primary}{HTML}{163A5F} % Dark blue
+\definecolor{textgray}{HTML}{444444}
+
+% ------------------------------------------------
+% Hyperlink setup
+% ------------------------------------------------
+\hypersetup{
+    colorlinks=true,
+    urlcolor=primary
+}
+
+% ------------------------------------------------
+% General formatting
+% ------------------------------------------------
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=2.0em,itemsep=0.01em,topsep=0.01em}
+
+% ------------------------------------------------
+% Section styling
+% ------------------------------------------------
+\titleformat{\section}
+{\large\bfseries\color{primary}}
+{}
+{0em}
+{}
+[\titlerule]
+
+\titlespacing{\section}
+{0pt}
+{1.0em}
+{0.6em}
+
+% ------------------------------------------------
+% Commands
+% ------------------------------------------------
+\newcommand{\cvitem}[1]{
+    \item #1
+}
+
+\newcommand{\role}[4]{
+    \textbf{#1} \hfill {\small #2} \\
+    \textit{#3} \hfill {\small #4}
+}
+
+% ------------------------------------------------
+% Document
+% ------------------------------------------------
+\begin{document}
+
+% =================================================
+% Header
+% =================================================
+
+\begin{minipage}[c]{0.78\textwidth}
+
+{\huge \color{primary}
+{\LARGE \textbf{Dr.-Ing.}} \textbf{Salar Mohtaj}} \\[-0.45em]
+
+{\large Senior Applied Scientist \hspace{0.2em} \textbar\ \hspace{0.2em} AI \& NLP} \\[0.25em]
+
+    \faMapMarker* \ Berlin, Germany \hspace{0.1em}
+    \faEnvelope \ \href{mailto:salar.mohtaj@gmail.com}{salar.mohtaj@gmail.com} \hspace{0.1em}
+    \faPhone \ (+49)17632258867 \\[-1.0em]
+
+    \faLinkedin \ 
+    \href{https://linkedin.com/in/salar-mohtaj}{linkedin.com/in/salar-mohtaj}
+    \hspace{0.1em}
+    \faGithub \ 
+    \href{https://github.com/salarmohtaj}{github.com/salarmohtaj}
+    
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.18\textwidth}
+\centering
+
+% ------------------------------------------------
+% Profile photo circle
+% Replace profile.jpg with your image
+% ------------------------------------------------
+
+\begin{tikzpicture}
+    \clip (0,0) circle (1.6cm);
+    \node at (0,0) {\includegraphics[width=3.2cm]{profile.jpeg}};
+\end{tikzpicture}
+
+\end{minipage}
+
+
+% =================================================
+% Summary
+% =================================================
+\vspace{0.9em}
+\section*{Profile}
+
+AI/NLP researcher with 8+ years of experience in multilingual NLP, LLM evaluation, transfer learning, and human-centered language technologies. Specialized in readability assessment, harmful content detection, and evaluation methodologies for large language models. Experienced in bridging academic research and applied AI systems through rapid prototyping, dataset creation, and production-oriented NLP pipelines.
+
+% =================================================
+% Skills
+% =================================================
+\vspace{0.7em}
+
+\section*{Knowledge \& Skills}
+
+\textbf{Large Language Models:} 
+LLM Evaluation, Prompt Engineering, Mechanistic Interpretability, RAG Systems, AI Safety, Human-in-the-Loop Evaluation
+
+\textbf{NLP \& Machine Learning:} 
+Transfer Learning, Text Simplification, Readability Assessment, Harmful Content Detection, Semantic Similarity, Multilingual NLP
+
+\textbf{Frameworks \& Engineering:} 
+PyTorch, Hugging Face Transformers, LangChain, LlamaIndex, Promptfoo, FastAPI, MLflow, Docker, AWS
+
+\textbf{Programming:} 
+Python, SQL, R
+
+\textbf{Languages:} 
+English (C1/C2), German (B2), Persian/Farsi (Native)
+
+% =================================================
+% Experience
+% =================================================
+\vspace{0.7em}
+
+\section*{Experience}
+
+\role
+{Senior Research Scientist}
+{Dec 2019 -- Dec 2025}
+{German Research Center for Artificial Intelligence (DFKI)}
+{Berlin, Germany}
+
+\begin{itemize}
+    \cvitem{Led research and development of evaluation methodologies for generative models, focusing on multilingual and multimodal assessment pipelines.}
+
+    \cvitem{Designed benchmark-driven evaluation frameworks for NLG systems, including automated comparative scoring and reliability analysis using LLM-based judges.}
+
+    \cvitem{Developed industrial LLM training and reskilling programs for Deutsche Telekom, covering prompt engineering, fine-tuning workflows, RAG, and agent-based AI systems..}
+
+    \cvitem{Conducted applied NLP research on readability assessment and text simplification for German-language accessibility applications.}
+\end{itemize}
+
+\vspace{0.5em}
+
+\role
+{Research Scientist}
+{Mar 2019 -- Dec 2019}
+{Technische Universität Berlin}
+{Berlin, Germany}
+
+\begin{itemize}
+    \cvitem{Developed TextComplexityDE, one of the first large-scale datasets for German readability assessment and text complexity research.}
+
+    \cvitem{Designed and taught an online NLP course reaching more than 1,000 learners across Germany.}
+
+    \cvitem{Investigated transfer learning approaches for multilingual and low-resource NLP applications.}
+\end{itemize}
+
+
+\vspace{0.5em}
+
+
+\begin{samepage}
+
+\role
+{NLP Researcher \& Developer}
+{Apr 2014 -- Feb 2019}
+{ICT Research Institute of ACECR}
+{Tehran, Iran}
+
+\begin{itemize}
+    \cvitem{Developed Hamtajoo, a large-scale plagiarism detection platform for Persian academic documents using semantic similarity methods.}
+
+    \cvitem{Created Parsivar, an open-source Persian NLP toolkit supporting normalization, tokenization, stemming, and linguistic preprocessing.}
+
+    \cvitem{Built machine learning pipelines for Persian educational technology and NLP applications.}
+\end{itemize}
+\end{samepage}
+
+% =================================================
+% Projects
+% =================================================
+\vspace{0.7em}
+
+\section*{Selected Projects}
+
+\textbf{Interpreting and Steering Large Language Models} \hfill 2025 -- Present
+
+\begin{itemize}
+    \cvitem{Investigating mechanistic interpretability techniques for understanding internal representations in transformer-based language models.}
+
+    \cvitem{Developing methods for controllable generation and neuron-level behavioral steering using TransformerLens and activation analysis.}
+\end{itemize}
+
+\vspace{0.4em}
+
+\textbf{German Text Complexity Assessment \& Simplification} \hfill 2021 -- 2025
+
+\begin{itemize}
+    \cvitem{Developed explainable NLP pipelines for predicting German text complexity and generating simplified text variants.}
+
+    \cvitem{Applied transformer-based multi-task learning approaches for readability assessment.}
+\end{itemize}
+
+% =================================================
+% Education
+% =================================================
+\vspace{0.7em}
+
+\section*{Education}
+
+\role
+{PhD in Computer Engineering}
+{2020 -- 2024}
+{Technische Universität Berlin}
+{Berlin, Germany}
+\begin{itemize}
+    \cvitem{Dissertation: \textit{Transfer Learning for Harmful Content Detection}}
+\end{itemize}
+
+
+\vspace{0.5em}
+
+\role
+{MSc in Information Technology}
+{2011 -- 2014}
+{Amirkabir University of Technology}
+{Tehran, Iran}
+
+\vspace{0.5em}
+
+\role
+{BSc in Information Technology}
+{2006 -- 2011}
+{Shahrood University of Technology}
+{Shahrood, Iran}
+
+% =================================================
+% Publications
+% =================================================
+\vspace{0.7em}
+
+\section*{Selected Publications \small [  
+    \href{https://scholar.google.com/citations?user=lnrUBN0AAAAJ}{\faGraduationCap \ full list}]}
+
+\begin{itemize}
+    \cvitem{\textbf{Mohtaj}, S. \textit{Transfer Learning for Harmful Content Detection}. Springer, 2025.}
+
+    \cvitem{\textbf{Mohtaj} et al. ``NewsPolyML: Multi-lingual European News Fake Assessment Dataset.'' ACM Multimedia AI Against Disinformation Workshop, 2024.}
+
+    \cvitem{\textbf{Mohtaj} et al. ``Multi-Task Learning for German Text Readability.'' CLiC-it, 2024.}
+
+    \cvitem{Yang, \textbf{Mohtaj}, et al. ``Order in the Evaluation Court: A Critical Analysis of NLG Evaluation Trends.'' ACL 2026 (under review).}
+\end{itemize}
+
+% =================================================
+% Optional Final Section
+% =================================================
+\vspace{0.7em}
+
+\section*{Open Source \& Academic Activities}
+
+\begin{itemize}
+    \cvitem{Software Campus Fellow — Selected for Germany’s national leadership and research funding program for outstanding IT researchers.}
+
+    \cvitem{Program Committee Member — KlarText Workshop on German Text Simplification.}
+
+    \cvitem{Creator and maintainer of Parsivar, an open-source Persian NLP toolkit for text preprocessing.}
+
+    \cvitem{Supervised 50+ Bachelor’s and Master’s theses in NLP, machine learning, and AI-related topics.}
+
+\end{itemize}
+
+\end{document}

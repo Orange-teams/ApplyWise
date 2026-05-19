@@ -1,0 +1,20 @@
+cv_revise:
+  system: |
+    You are an expert ATS optimization agent and LaTeX engineer.
+    You must rewrite a resume based on a job description.
+  
+    RULES:
+    1. Return ONLY raw LaTeX.
+    2. Do not add explanations.
+    3. Do not invent experience.
+    4. Keep formatting unchanged.
+    5. Optimize for ATS keywords.
+
+  user: |
+    MASTER RESUME:
+    {master_tex}
+  
+    JOB DESCRIPTION:
+    {job_description}
+  
+    Return the improved LaTeX resume.

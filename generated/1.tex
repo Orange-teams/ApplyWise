@@ -1,0 +1,314 @@
+\documentclass[11pt,a4paper]{article}
+
+% ------------------------------------------------
+% Packages
+% ------------------------------------------------
+\usepackage[a4paper,margin=1.7cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{needspace}
+
+\raggedbottom
+
+\interlinepenalty=10000
+
+\titleformat{\section}
+{\normalfont}
+{}
+{0em}
+{
+    \needspace{8\baselineskip}
+    \color{primary}
+    \bfseries
+    \fontsize{13}{15}\selectfont
+}
+[\titlerule]
+% ------------------------------------------------
+% Colors
+% ------------------------------------------------
+\definecolor{primary}{HTML}{163A5F} % Dark blue
+\definecolor{textgray}{HTML}{444444}
+
+% ------------------------------------------------
+% Hyperlink setup
+% ------------------------------------------------
+\hypersetup{
+    colorlinks=true,
+    urlcolor=primary
+}
+
+% ------------------------------------------------
+% General formatting
+% ------------------------------------------------
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=2.0em,itemsep=0.01em,topsep=0.01em}
+
+% ------------------------------------------------
+% Section styling
+% ------------------------------------------------
+\titleformat{\section}
+{\large\bfseries\color{primary}}
+{}
+{0em}
+{}
+[\titlerule]
+
+\titlespacing{\section}
+{0pt}
+{1.0em}
+{0.6em}
+
+% ------------------------------------------------
+% Commands
+% ------------------------------------------------
+\newcommand{\cvitem}[1]{
+    \item #1
+}
+
+\newcommand{\role}[4]{
+    \textbf{#1} \hfill {\small #2} \\
+    \textit{#3} \hfill {\small #4}
+}
+
+% ------------------------------------------------
+% Document
+% ------------------------------------------------
+\begin{document}
+
+% =================================================
+% Header
+% =================================================
+
+\begin{minipage}[c]{0.78\textwidth}
+
+{\huge \color{primary}
+{\LARGE \textbf{Dr.-Ing.}} \textbf{Salar Mohtaj}} \\[-0.45em]
+
+{\large Senior Applied Scientist \hspace{0.2em} \textbar\ \hspace{0.2em} AI \& NLP} \\[0.25em]
+
+    \faMapMarker* \ Berlin, Germany \hspace{0.1em}
+    \faEnvelope \ \href{mailto:salar.mohtaj@gmail.com}{salar.mohtaj@gmail.com} \hspace{0.1em}
+    \faPhone \ (+49)17632258867 \\[-1.0em]
+
+    \faLinkedin \ 
+    \href{https://linkedin.com/in/salar-mohtaj}{linkedin.com/in/salar-mohtaj}
+    \hspace{0.1em}
+    \faGithub \ 
+    \href{https://github.com/salarmohtaj}{github.com/salarmohtaj}
+    
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.18\textwidth}
+\centering
+
+% ------------------------------------------------
+% Profile photo circle
+% Replace profile.jpg with your image
+% ------------------------------------------------
+
+\begin{tikzpicture}
+    \clip (0,0) circle (1.6cm);
+    \node at (0,0) {\includegraphics[width=3.2cm]{profile.jpeg}};
+\end{tikzpicture}
+
+\end{minipage}
+
+
+% =================================================
+% Summary
+% =================================================
+\vspace{0.9em}
+\section*{Profile}
+
+Experienced AI/NLP professional with 8+ years in \textbf{Data Analytics}, \textbf{Business Intelligence}, and \textbf{Reporting}, specializing in leveraging \textbf{AI/ML} for \textbf{data-driven decision-making}. Expertise includes \textbf{LLM evaluation}, \textbf{transfer learning}, \textbf{multilingual NLP}, and developing \textbf{evaluation methodologies} for complex systems. Proven ability to translate \textbf{complex business requirements} into \textbf{actionable insights}, build \textbf{KPI frameworks}, and automate \textbf{reporting pipelines} through rapid prototyping, \textbf{dataset creation}, and \textbf{production-oriented data pipelines}.
+
+% =================================================
+% Skills
+% =================================================
+\vspace{0.7em}
+
+\section*{Knowledge \& Skills}
+
+\textbf{Data Analytics \& BI:} 
+Data Analysis, Business Intelligence, Reporting, KPI Frameworks, Data Visualization, Business Understanding, AI-powered Analysis, Scalable Data Processes, Forecasting, Funnel Analysis, Performance Management
+
+\textbf{Large Language Models:} 
+LLM Evaluation, Prompt Engineering, Mechanistic Interpretability, RAG Systems, AI Safety, Human-in-the-Loop Evaluation
+
+\textbf{NLP \& Machine Learning:} 
+Transfer Learning, Text Simplification, Readability Assessment, Harmful Content Detection, Semantic Similarity, Multilingual NLP
+
+\textbf{Frameworks \& Engineering:} 
+PyTorch, Hugging Face Transformers, LangChain, LlamaIndex, Promptfoo, FastAPI, MLflow, Docker, AWS
+
+\textbf{Programming:} 
+Python, SQL, R, Excel
+
+\textbf{Languages:} 
+English (C1/C2), German (B2), Persian/Farsi (Native)
+
+% =================================================
+% Experience
+% =================================================
+\vspace{0.7em}
+
+\section*{Experience}
+
+\role
+{Senior Research Scientist}
+{Dec 2019 -- Dec 2025}
+{German Research Center for Artificial Intelligence (DFKI)}
+{Berlin, Germany}
+
+\begin{itemize}
+    \cvitem{Led development of \textbf{data-driven evaluation methodologies} and \textbf{KPI frameworks} for generative models, establishing \textbf{multilingual assessment pipelines} to provide \textbf{business insights}.}
+
+    \cvitem{Designed \textbf{benchmark-driven evaluation frameworks} and \textbf{dashboards} for NLG systems, incorporating \textbf{automated reporting} and \textbf{performance management} for \textbf{data-driven decisions}.}
+
+    \cvitem{Developed industrial LLM training programs, translating complex AI concepts into practical applications and collaborating with \textbf{stakeholders} to define \textbf{reporting standards} and \textbf{control logics}.}
+
+    \cvitem{Conducted \textbf{data analysis} for NLP research on readability assessment and text simplification, identifying \textbf{efficiency potentials} for German-language accessibility applications.}
+\end{itemize}
+
+\vspace{0.5em}
+
+\role
+{Research Scientist}
+{Mar 2019 -- Dec 2019}
+{Technische Universität Berlin}
+{Berlin, Germany}
+
+\begin{itemize}
+    \cvitem{Developed TextComplexityDE, a large-scale \textbf{dataset} for German readability assessment, involving \textbf{data extraction, preparation, and analysis} for \textbf{business insights}.}
+
+    \cvitem{Designed and taught an online NLP course, effectively communicating complex analytical results to a broad audience.}
+
+    \cvitem{Investigated \textbf{data-driven transfer learning} approaches for multilingual and low-resource NLP applications, identifying \textbf{patterns} and \textbf{efficiency potentials}.}
+\end{itemize}
+
+
+\vspace{0.5em}
+
+
+\begin{samepage}
+
+\role
+{NLP Researcher \& Developer}
+{Apr 2014 -- Feb 2019}
+{ICT Research Institute of ACECR}
+{Tehran, Iran}
+
+\begin{itemize}
+    \cvitem{Developed Hamtajoo, a large-scale \textbf{data analysis platform} for plagiarism detection, utilizing \textbf{semantic similarity methods} to identify \textbf{patterns} and \textbf{deviations}.}
+
+    \cvitem{Created Parsivar, an open-source Persian NLP toolkit, enhancing \textbf{data quality} and \textbf{availability} for linguistic preprocessing.}
+
+    \cvitem{Built \textbf{scalable data processes} and machine learning pipelines for Persian educational technology and NLP applications, supporting \textbf{data-driven steering}.}
+\end{itemize}
+\end{samepage}
+
+% =================================================
+% Projects
+% =================================================
+\vspace{0.7em}
+
+\section*{Selected Projects}
+
+\textbf{Interpreting and Steering Large Language Models} \hfill 2025 -- Present
+
+\begin{itemize}
+    \cvitem{Investigating \textbf{AI-powered analysis} techniques for understanding internal representations in transformer-based language models, identifying \textbf{patterns} and \textbf{insights}.}
+
+    \cvitem{Developing methods for controllable generation and neuron-level behavioral steering, contributing to \textbf{performance management} and \textbf{process optimization}.}
+\end{itemize}
+
+\vspace{0.4em}
+
+\textbf{German Text Complexity Assessment \& Simplification} \hfill 2021 -- 2025
+
+\begin{itemize}
+    \cvitem{Developed explainable NLP pipelines for \textbf{data analysis} of German text complexity, generating \textbf{insights} for simplified text variants.}
+
+    \cvitem{Applied transformer-based multi-task learning approaches for readability assessment, contributing to \textbf{data-driven decisions} in accessibility.}
+\end{itemize}
+
+% =================================================
+% Education
+% =================================================
+\vspace{0.7em}
+
+\section*{Education}
+
+\role
+{PhD in Computer Engineering}
+{2020 -- 2024}
+{Technische Universität Berlin}
+{Berlin, Germany}
+\begin{itemize}
+    \cvitem{Dissertation: \textit{Transfer Learning for Harmful Content Detection}}
+\end{itemize}
+
+
+\vspace{0.5em}
+
+\role
+{MSc in Information Technology}
+{2011 -- 2014}
+{Amirkabir University of Technology}
+{Tehran, Iran}
+
+\vspace{0.5em}
+
+\role
+{BSc in Information Technology}
+{2006 -- 2011}
+{Shahrood University of Technology}
+{Shahrood, Iran}
+
+% =================================================
+% Publications
+% =================================================
+\vspace{0.7em}
+
+\section*{Selected Publications \small [  
+    \href{https://scholar.google.com/citations?user=lnrUBN0AAAAJ}{\faGraduationCap \ full list}]}
+
+\begin{itemize}
+    \cvitem{\textbf{Mohtaj}, S. \textit{Transfer Learning for Harmful Content Detection}. Springer, 2025.}
+
+    \cvitem{\textbf{Mohtaj} et al. ``NewsPolyML: Multi-lingual European News Fake Assessment Dataset.'' ACM Multimedia AI Against Disinformation Workshop, 2024.}
+
+    \cvitem{\textbf{Mohtaj} et al. ``Multi-Task Learning for German Text Readability.'' CLiC-it, 2024.}
+
+    \cvitem{Yang, \textbf{Mohtaj}, et al. ``Order in the Evaluation Court: A Critical Analysis of NLG Evaluation Trends.'' ACL 2026 (under review).}
+\end{itemize}
+
+% =================================================
+% Optional Final Section
+% =================================================
+\vspace{0.7em}
+
+\section*{Open Source \& Academic Activities}
+
+\begin{itemize}
+    \cvitem{Software Campus Fellow — Selected for Germany’s national leadership and research funding program for outstanding IT researchers.}
+
+    \cvitem{Program Committee Member — KlarText Workshop on German Text Simplification.}
+
+    \cvitem{Creator and maintainer of Parsivar, an open-source Persian NLP toolkit for text preprocessing.}
+
+    \cvitem{Supervised 50+ Bachelor’s and Master’s theses in NLP, machine learning, and AI-related topics, fostering \textbf{data analysis} and \textbf{business understanding} skills.}
+
+\end{itemize}
+
+\end{document}

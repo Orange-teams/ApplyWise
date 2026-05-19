@@ -47,3 +47,13 @@ class JobRepository:
 
         finally:
             session.close()
+
+    def get_job(self, job_id: int):
+
+        session = SessionLocal()
+
+        try:
+            return session.query(JobTable).filter(JobTable.id == job_id).first()
+
+        finally:
+            session.close()

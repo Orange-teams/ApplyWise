@@ -14,13 +14,13 @@ The `src/` directory contains the core implementation of ApplyWise — the main 
 <!-- BEGIN TREE -->
 ```text
 ├── agents
-│   ├── crawler.py
-│   └── linkedin_germany_filtered.json
 ├── constants
 │   └── filters.py
 ├── core
 │   └── exceptions.py
 ├── crawlers
+│   ├── parsers
+│   │   └── linkedin_job_description_parser.py
 │   ├── base.py
 │   └── linkedin.py
 ├── db
@@ -33,19 +33,33 @@ The `src/` directory contains the core implementation of ApplyWise — the main 
 │   ├── init_db.py
 │   ├── models.py
 │   └── session.py
+├── llms
+│   ├── services
+│   │   └── cv_tailor_service.py
+│   ├── base.py
+│   └── gemini_provider.py
 ├── models
 │   └── job.py
+├── prompts
+│   └── prompts.yaml
+├── resume
+│   ├── compiler
+│   │   └── latex_compiler.py
+│   ├── storage
+│   │   └── resume_storage.py
+│   └── templates
+│       └── master_resume.tex
 ├── services
 │   ├── job_service.py
 │   ├── storage_service.py
 │   └── user_service.py
 ├── utils
 │   ├── http.py
-│   └── logger.py
-├── workers
-│   └── job_description_worker.py
+│   ├── logger.py
+│   └── prompt_loader.py
 ├── workflows
-│   └── application_pipeline.py
+│   ├── application_pipeline.py
+│   └── cv_tailoring_pipeline.py
 ├── main.py
 └── README.md
 ```
