@@ -11,7 +11,14 @@ def seed():
 
     try:
         # Create user
-        user = User(name="test_user")
+        edit_policy = {
+            "summary": True,
+            "experience": False,
+            "skills": False,
+            "education": False
+        }
+
+        user = User(name="test_user",cv_edit_policy=edit_policy)
         session.add(user)
         session.flush()  # get user.id
 

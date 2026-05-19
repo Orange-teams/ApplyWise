@@ -1,7 +1,9 @@
 from pathlib import Path
 from pydantic_settings import BaseSettings
 import yaml
+from typing import ClassVar
 import os
+from zoneinfo import ZoneInfo
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -27,6 +29,8 @@ class Settings(BaseSettings):
     MASTER_RESUME_PATH: Path = BASE_DIR / "src" / "resume" / "templates" / "master_resume.tex"
     GENERATED_TEX_PATH: Path = BASE_DIR / "generated"
     OUTPUT_DIR: Path = BASE_DIR / "data" / "outputs"
+
+
     # ===== Requests =====
     REQUEST_TIMEOUT: int = 20
     REQUEST_DELAY: int = 3
@@ -50,3 +54,5 @@ class Settings(BaseSettings):
 settings = Settings()
 DB_PATH = BASE_DIR / "data" / "app.db"
 DB_URL = f"sqlite:///{DB_PATH}"
+MY_LATEX = BASE_DIR / "old" / "main.tex"
+TIMEZONE = ZoneInfo("UTC")

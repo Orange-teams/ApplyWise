@@ -14,6 +14,7 @@ The `scripts/` directory contains utility scripts that support development and o
 <!-- BEGIN TREE -->
 ```text
 ├── db
+│   ├── cv_insert.py
 │   ├── init_db.py
 │   ├── reset_db.py
 │   └── seed_db.py

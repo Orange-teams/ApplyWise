@@ -39,6 +39,7 @@ The `src/` directory contains the core implementation of ApplyWise — the main 
 │   ├── base.py
 │   └── gemini_provider.py
 ├── models
+│   ├── cveditpolicy.py
 │   └── job.py
 ├── prompts
 │   └── prompts.yaml
@@ -47,16 +48,19 @@ The `src/` directory contains the core implementation of ApplyWise — the main 
 │   │   └── latex_compiler.py
 │   ├── storage
 │   │   └── resume_storage.py
-│   └── templates
-│       └── master_resume.tex
+│   ├── templates
+│   │   └── master_resume.tex
+│   └── latex_parser.py
 ├── services
+│   ├── cv_service.py
 │   ├── job_service.py
 │   ├── storage_service.py
 │   └── user_service.py
 ├── utils
 │   ├── http.py
 │   ├── logger.py
-│   └── prompt_loader.py
+│   ├── prompt_loader.py
+│   └── time.py
 ├── workflows
 │   ├── application_pipeline.py
 │   └── cv_tailoring_pipeline.py
