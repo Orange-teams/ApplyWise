@@ -18,7 +18,6 @@ class Settings(BaseSettings):
 
     # API KEYS
     GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY")
-
     # ===== Paths =====
     BASE_DIR: Path = BASE_DIR
     DATA_DIR: Path = BASE_DIR / "data"

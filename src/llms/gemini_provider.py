@@ -5,7 +5,7 @@ from config.settings import settings
 
 class GeminiProvider(BaseLLMProvider):
 
-    def __init__(self, api_key=settings.GEMINI_API_KEY, model="gemini-2.5-flash"):
+    def __init__(self, api_key=settings.GEMINI_API_KEY, model=settings.GEMINI_MODEL):
         self.client = genai.Client(api_key=api_key)
         self.model = model
 
